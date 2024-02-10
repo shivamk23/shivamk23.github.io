@@ -149,7 +149,7 @@ body.dark-theme {
 }
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1024px;
+  max-width: 90%;
   margin-inline: 1.5rem;
 }
 
@@ -228,6 +228,7 @@ z-index:var(--z-fixed);
 }
 
 @media screen and (max-width:1023px){
+  
 .nav__menu{
   position: fixed;
   width:88%;
@@ -241,7 +242,10 @@ padding :2rem 1.5rem 5rem;
 border-radius: 2rem;
 transition: botttom .3s;
 }
-
+        .skills__info {
+          grid-template-columns: repeat(5, 1fr);
+          gap: 2.5rem 2rem;
+        }
 }
 
 .nav__list{
@@ -303,7 +307,7 @@ row-gap:1.5rem;
   text-align: center;
   font-size:var(--biggest-font-size);
   letter-spacing: .3px;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .home__blob{
@@ -317,7 +321,9 @@ row-gap:1.5rem;
   place-items: center;
   transition: background .4s; /* for dark mode animation */
 }
-
+.poposal_btn{
+  height: 10px;
+}
 .home__perfil{
   width:170px;
   height:260px;
@@ -400,8 +406,17 @@ column-gap: 1.25rem;
 
 
 /*=============== SKILLS ===============*/
+
 .skills__container{
   row-gap:3.5rem;
+}
+
+.skills__section-title {
+  text-align: center;
+  /* Center the text */
+  margin-top: 30px;
+  margin-bottom: 10px;
+  /* Add some space between the title and the skills */
 }
 
 .skills__title{
@@ -424,16 +439,21 @@ font-weight: initial;
 .skills__data,
 .skills__blob{
   display:grid;
+  align-items: center;
 }
 
 .skills__info{
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(5,1fr);
   gap:2.5rem 2rem;
+
+
 }
+
 
 .skills__data{
   justify-content: center;
   text-align: center;
+
 }
 
 .skills__blob{
@@ -443,7 +463,8 @@ font-weight: initial;
   border-radius: 3rem;
   place-items: center;
   margin-bottom: 1rem;
-  transition: background .4s; /* for dark mode animation */
+  transition: background .4s;
+   /* for dark mode animation */
 }
 
 .skills__blob img{
@@ -941,6 +962,14 @@ bottom: .5rem;
     justify-self: center;
 
   }
+                .skills__info {
+                  grid-template-columns: repeat(2, 1fr);
+                  /* Change to 2 columns for tablet screens */
+                  gap: 1.5rem;
+                  /* Reduce the gap between columns */
+                }
+        
+                
 }
 
 /* For medium devices */
@@ -969,6 +998,13 @@ bottom: .5rem;
   .projects__container .swiper-button-next{
     right: 1rem;;
   }
+            .skills__info {
+              grid-template-columns: repeat(3, 1fr);
+              /* Change to 2 columns for tablet screens */
+              gap: 1.5rem;
+              /* Reduce the gap between columns */
+            }
+      
 }
 @media screen and (min-width:767px) {
   .home__container{
@@ -1077,6 +1113,17 @@ bottom: 5rem;
   .dark-theme .bg-header{
     box-shadow: 0 6px 24px hsla(207, 24%, 8%,.6);
   }
+            .skills__info {
+              grid-template-columns: repeat(5, 1fr);
+              /* Change to 2 columns for tablet screens */
+              gap: 1.5rem;
+              /* Reduce the gap between columns */
+            }
+      
+            .skills__section-title {
+            padding: 20px;
+              /* Reduce the font size of section titles */
+            }
 
 }
 @media screen and (min-width:1048px) {
@@ -1146,6 +1193,7 @@ bottom: 5rem;
     font-size: var(--normal-font-size);
   }
   .skills__info{
+    
     gap: 3rem;
   }
   .qualification__container{
@@ -1285,6 +1333,10 @@ bottom: 5rem;
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
+  .skills__info {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem 2rem;
+    }
   .contact__button--resume {
       font-size: 14px;
       padding: 8px 16px;
@@ -1297,4 +1349,5 @@ bottom: 5rem;
       font-size: 18px;
       padding: 12px 24px;
   }
+
 }
